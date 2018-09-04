@@ -8,37 +8,26 @@
 </head>
 
 <body>
-<div id="chat" style="width: 100%;height: 70%">
+<div id="chat" style="width: 100%;height: 70%;overflow-x:hidden;overflow-y:scroll">
 
 </div>
-<div id="cc" style="width: 100%;height: 10%;background-color: #eee"></div>
-
+<div id="cc" style="width: 100%;height: 8%;background-color: #eee"></div>
+<div style="width: 100%;height: 20%">
+    <textarea placeholder="请输入内容" id="content" class="layui-textarea"></textarea>
+</div>
+<div style="position: absolute;right: 5px;bottom: 5px">
+    <button class="layui-btn layui-btn-normal layui-btn-radius" id="sub">发送</button>
+</div>
 <script src="js/jQuery/jquery-2.2.3.min.js"></script>
 <script src="layui/layui.all.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
 
-    $("#test").click(function () {
-
-        layer.open({
-            type: 2,
-            title: '很多时候，我们想最大化看，比如像这个页面。',
-            shadeClose: true,
-            shade: false,
-            maxmin: true, //开启最大化最小化按钮
-            area: ['893px', '600px'],
-            content: '啊啊啊'
-        });
-
-    });
-
-
-
 
 
     //***************************************************************************
     var ws = new WebSocket("ws://119.27.161.212:8082");
-    var accountName = "匿名";
+    var accountName = "${name}";
 
     /**
      * 接收消息
