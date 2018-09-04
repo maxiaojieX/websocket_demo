@@ -14,4 +14,9 @@ public class ChatController {
         return "chat";
     }
 
+    @GetMapping("/content")
+    public String cc() {
+        return "content";
+    }
+
 }

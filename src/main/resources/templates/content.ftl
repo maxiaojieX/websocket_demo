@@ -8,15 +8,11 @@
 </head>
 
 <body>
-<#--<div id="chat" style="width: 100%;height: 500px;background-color: #999999">-->
+<div id="chat" style="width: 100%;height: 70%">
 
-<#--</div>-->
-<#--<div>-->
-    <#--请输入你的名字:<input type="text" id="name">-->
-    <#--<input type="text" id="content">-->
-    <#--<button id="sub">发送</button>-->
-<#--</div>-->
-<button id="test">测试</button>
+</div>
+<div id="cc" style="width: 100%;height: 10%;background-color: #eee"></div>
+
 <script src="js/jQuery/jquery-2.2.3.min.js"></script>
 <script src="layui/layui.all.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -26,15 +22,18 @@
 
         layer.open({
             type: 2,
-            title: 'WHO',
+            title: '很多时候，我们想最大化看，比如像这个页面。',
             shadeClose: true,
             shade: false,
-            min: true,
-            area: ['686px', '499px'],
-            content: '/content'
+            maxmin: true, //开启最大化最小化按钮
+            area: ['893px', '600px'],
+            content: '啊啊啊'
         });
 
     });
+
+
+
 
 
     //***************************************************************************
